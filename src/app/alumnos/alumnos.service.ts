@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Alumno } from './alumnos.model';
 
 @Injectable({
@@ -34,10 +35,11 @@ export class AlumnosService {
     return this.alumnos;
   }
   //agrgar un a
-  getAlumnoPorId(dni: string){
+  getAlumnoPorId(dni: string | null /*undefined*/): Observable<Alumno | undefined>{
     //alumnosEncontrado : Alumno;
     //Buscar el alumnos que tenga el dni proporcionado
-    //return alumnosEncontrado
+    //Regresar el alumno que tenga el dni proporcionado
+    return of(this.alumnos.find(alum => alum.dni === dni));
   }
 
   agregarAlumno(alum: Alumno) {
@@ -46,7 +48,8 @@ export class AlumnosService {
 
   nuevoAlumno(): Alumno {
     return {
-      dni: this.alumnos.length,
+      dni: '',
+      //dni: this.alumnos.length,
       nombre: '',
       //notas: number;
       nota1: 0,

@@ -1,0 +1,28 @@
+<div *ngIf="alumno">
+    <h2>Detalle de {{ alumno.nombre | uppercase }}</h2>
+    <div><span>dni: </span>{{alumno.dni}}</div>
+    <div>
+        <label>Nombre: <p>{{alumno.nombre}}</p>
+        </label>
+        <label>Nota 1: <p>{{alumno.nota1}}</p>
+        </label>
+        <label>Nota 2: <p>{{alumno.nota2}}</p>
+        </label>
+        <label>Nota 3: <p>{{alumno.nota3}}</p>
+        </label>
+    </div>
+</div>
+<button (click)="goBack()">Atrás</button>
+
+<!--
+<div *ngIf="! alumnos.length">No hay alumnos por el momento</div>
+<div>-->
+    <!--NECESITA UN ANCLA APRA TENER EL DNI DEL CLIENTE ACTUAL
+<article *ngFor="let alumno of alumnos">
+    <span>Dni: {{alumno.dni}}</span>
+    <span>Nombre: {{alumno.nombre}}</span>
+    <span>Nota2: {{alumno.nota1}}</span>
+    <span>Nota1: {{alumno.nota2}}</span>
+    <span>Nota3: {{alumno.nota3}}</span>
+</article>
+</div>-->

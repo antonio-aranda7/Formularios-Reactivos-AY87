@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, /*AY88 */ FormGroup } from '@angular/forms';
-//import { AlumnosService } from './alumnos/alumnos.service';
-//import { Alumno } from './alumnos/alumnos.model';
+import { AlumnosService } from './alumnos/alumnos.service';
+import { Alumno } from './alumnos/alumnos.model';
 //import { AltaAlumnoComponent } from './alumnos/alta-alumno/alta-alumno.component';
 
 @Component({
@@ -14,7 +14,7 @@ export class AppComponent /**/implements OnInit{
   //SERVICE AY 90 Reactivo
   //alumno: Alumno;
   //AY 90
-  resultado:string;
+  /*resultado:string;
 
   formAlumno = new FormGroup({
     dni: new FormControl(''),
@@ -25,7 +25,7 @@ export class AppComponent /**/implements OnInit{
       nota2: new FormControl(''),
       nota3: new FormControl('')
     })
-  });
+  });*/
   //AY 89
   conversion: string;
   potenciaNumero: number;
@@ -87,7 +87,7 @@ export class AppComponent /**/implements OnInit{
     this.alumno.nota3 = this.formAlumno.value.notas.nota3;
   }*/
 
-  submit() {
+  submit2() {
     //AY 90
     /*let nota1=parseInt(this.formAlumno.value.notas.nota1);
     let nota2=parseInt(this.formAlumno.value.notas.nota2);

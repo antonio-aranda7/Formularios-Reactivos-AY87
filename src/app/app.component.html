@@ -11,7 +11,7 @@
 <p><button (click)="borrarTodas()">Borrar todas las actividades</button></p>
 <br>
 <p>AY 88</p>
-<form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+<form [formGroup]="formularioContacto" (ngSubmit)="submit2()">
   <p>Nombre:
     <input type="text" formControlName="nombre">
   </p>
@@ -26,7 +26,7 @@
 <div>{{datos}}</div>
 <br>
 <p>AY 89</p>
-<form [formGroup]="formularioConversion" (ngSubmit)="submit()">
+<form [formGroup]="formularioConversion" (ngSubmit)="submit2()">
   <p>Ingrese número decimal:
     <input type="text" formControlName="numerodecimal">
   </p>
@@ -88,5 +88,13 @@
   <p>Nota3: {{alumno.nota3}}</p>
 
 </div>-->
-<!---->
-<app-alta-alumno></app-alta-alumno>
+<!--
+<app-alta-alumno></app-alta-alumno>-->
+<div>
+  <nav>
+    <a routerLink="/alta-alumnos">Alta alumnos</a>
+    <a routerLink="/lista-alumnos">Lista alumnos</a>
+    <!--<a routerLink="/lista-alumnos" routerLinkActive="active">Lista alumnos</a>-->
+  </nav>
+  <router-outlet></router-outlet>
+</div>

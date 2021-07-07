@@ -13,18 +13,29 @@
     <p>Nota3: {{alumno.nota3}}</p>
 
 </div>-->
+
+<h2>Listado Alumnos</h2>
+<ul class="alumnos">
+  <li *ngFor="let itemAlumno of alumnos">
+    <a routerLink="/detalle-alumno/{{itemAlumno.dni}}">
+      <!--<span class="badge">{{alumno.dni}}</span> {{alumno.nombre}}-->
+      <span class="badge">{{itemAlumno.dni}}</span> {{itemAlumno.nombre}}
+    </a>
+  </li>
+</ul>
+<!--<app-detalle-alumno></app-detalle-alumno>
+<app-detalle-alumno [alumno]="alumnoSeleccionado"></app-detalle-alumno>-->
+
 <!--
-    <h2>
-  Listado clientes
-</h2>
-<div *ngIf="! clientes.length">No hay clientes por el momento</div>
-<div>
-    NECESITA UN ANCLA APRA TENER EL DNI DEL CLIENTE ACTUAL
-  <article *ngFor="let cliente of clientes">
-    <span>{{cliente.nombre}}</span>
-    <span>{{cliente.cif}}</span>
-    <span>{{cliente.direccion}}</span>
-    <span>{{cliente.grupo}}</span>
+<div *ngIf="! alumnos.length">No hay alumnos por el momento</div>
+<div>-->
+    <!--NECESITA UN ANCLA APRA TENER EL DNI DEL CLIENTE ACTUAL
+  <article *ngFor="let alumno of alumnos">
+    <span>Dni: {{alumno.dni}}</span>
+    <span>Nombre: {{alumno.nombre}}</span>
+    <span>Nota2: {{alumno.nota1}}</span>
+    <span>Nota1: {{alumno.nota2}}</span>
+    <span>Nota3: {{alumno.nota3}}</span>
   </article>
-</div>
--->
+</div>-->
+

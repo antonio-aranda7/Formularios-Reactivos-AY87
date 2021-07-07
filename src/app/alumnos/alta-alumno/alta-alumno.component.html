@@ -1,4 +1,5 @@
 <p>AY 90 REACTIVO</p>
+
 <form [formGroup]="formAlumno" (ngSubmit)="submit()">
     <p>Dni:
         <input type="text" formControlName="dni">
@@ -22,8 +23,12 @@
 <div>
     <p>Resultado:{{resultado}}</p>
 </div>
+
+<!--<p><button type="button">Listado</button></p>-->
+<!--
 <p>component alumno</p>
 <br>
+
 <div>
     <h1>Datos del alumno</h1>
     <p>Dni: {{alumno.dni}}</p>
@@ -33,3 +38,6 @@
     <p>Nota3: {{alumno.nota3}}</p>
 
 </div>
+-->
+<!--<app-listado-alumno></app-listado-alumno>-->
+<!--<router-outlet></router-outlet>-->
